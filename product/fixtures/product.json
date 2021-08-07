@@ -1,0 +1,12 @@
+[
+  {
+    "model" : "product.product",
+    "pk" : 1,
+    "fields" : {
+      "name": "Coca Cola",
+      "ingredients": "Sugar, Water, Ice",
+      "price": 1.99,
+      "quantity": 100
+    }
+  }
+]

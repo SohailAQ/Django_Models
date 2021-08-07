@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>This is Products_DETAIL.html</h1>
+{% if user.is_authenticated %}
+  <h1>ITEM Detail View</h1>
+    <ul>
+        <li>{{ object.name }}</li>
+    </ul>
+  <div>
+      <p>{{object.ingredients}}</p>
+      <p>{{object.price}}</p>
+  </div>
+    <div>
+        <a href="{% url 'product-delete' object.id %}">Delete ITEM</a>
+        <a href="{% url 'product-update' object.id %}">Update ITEM</a>
+    </div>
+{% endif %}
+{% endblock %}

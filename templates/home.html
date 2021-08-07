@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <h2>Click <a href="{% url 'product-list' %}">here</a> to view Product.</h2>
+{% else %}
+  <p>You are not logged in</p>
+{% endif %}
+{% endblock %}
